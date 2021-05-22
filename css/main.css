@@ -1,0 +1,419 @@
+:root{
+    --github-black: #24292E;
+    --github-gray: #959DA5;
+    --github-outline-gray: #eaecef;
+    --github-svg-gray: #6a737d;
+    --github-blue: #0366D6;
+    --github-light-blue: #54a3ff;
+    --github-shadow-blue: #54a4ff67;
+    --github-peach: #f9826c;
+}
+
+*{
+    margin: 0px;
+    padding: 0px;
+}
+body{
+    color: var(--github-black);
+    font-family: -apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif,Apple Color Emoji,Segoe UI Emoji;
+}
+
+a{
+    text-decoration: none;
+}
+
+.container{
+    max-width: 1300px;
+    margin: auto;
+    display: flex;
+}
+
+
+
+.main-header{
+    background-color: var(--github-black);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 16px 0px;
+    color: white;
+    margin-bottom: 40px;
+}
+
+.mobile-menu{
+    display: none;
+    outline: none;
+    border:none;
+    background: transparent;
+    width: 24px;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 16px;
+}
+
+.mobile-menu > span{
+    display: block;
+    height: 1.5px;
+    border-radius: 3px;
+    background: white;
+    width: 100%;
+}
+
+.main-header section{
+    display: flex;
+    align-items: center;
+}
+.logo{
+    margin-right: 16px;
+}
+.logo img{
+    width: 32px;
+}
+.main-header a:hover{
+    opacity: 0.7;
+    cursor: pointer;
+    
+}
+
+input{
+    background-color: transparent;
+    outline: none;
+    border-width: 1px;
+    border-style: solid;
+    border-width: 1px;
+    width: 243px;
+    transition: width 0.3s ease-in-out;
+    border-radius: 5px;
+    padding: 8px 10px;
+    color: white;
+    line-height: 0;
+}
+
+.main-header input{
+    border-color: #444d56;
+}
+
+.main-header input:focus{
+    background-color: white;
+    color: var(--github-black);
+    width: 400px;
+}
+
+
+.main-header nav{
+ margin-left: 16px;
+ font-size: 14px;
+}
+.main-header nav ul{
+    list-style: none;
+}
+.main-header nav ul li{
+display: inline-block;
+margin-left: 16px;
+font-weight: 600;
+}
+.main-header nav ul li a, .main-header nav ul li a:visited{
+color: white;
+text-decoration: none;
+}
+
+.main-header .user div {
+    margin-left: 16px;
+}
+.main-header .notification {
+    position: relative;
+}
+.main-header .notification .indicator{
+    width: 9px;
+    height: 9px;
+    border-radius: 100%;
+    position: absolute;
+    top: -9;
+    right:-4;
+    background: linear-gradient( var(--github-light-blue), var(--github-blue));
+    border: 2px solid var(--github-black);
+}
+.main-header .user .avatar img{
+    width: 20px;
+    height: 20px;
+    object-position: center;
+    object-fit: cover;
+    border-radius: 100%;
+}
+
+.sidebar{
+    width: 23.5%;
+     max-width: 280px;
+     margin-right: 32px;
+     flex-shrink: 0;
+ }
+ .sidebar .profile {
+     font-weight: bold;
+     font-size: 14px;
+ }
+
+  .sidebar .profile img {
+     width: 32px;
+     height: 32px;
+     border-radius: 100%;
+     display: block;
+     margin-right: 8px;
+ }
+.tabs-wrapper{
+    border-bottom: 1px solid var(--github-outline-gray);
+    position: sticky;
+    top:0;
+    background: white;
+}
+
+.tabs {
+    list-style: none;
+}
+.tabs .item{
+    padding:  16px;
+    border-bottom-width: 2px;
+    border-bottom-style: solid;
+    border-bottom-color: transparent;
+    font-size: 14px;
+    display: inline-flex;
+    align-items: center;
+    margin-left: -5px;
+}
+
+.tabs .item:hover{
+    border-bottom-color: #d1d5da;
+}
+.tabs a {
+    color: var(--github-gray);
+   
+}
+
+.tabs .item.active{
+   color: var(--github-black);
+   border-bottom-color: var(--github-peach);
+   font-weight: 600;
+}
+
+.tabs .item.active svg{
+    fill: var(--github-black);
+}
+.tabs .item svg{
+    fill: var(--github-gray);
+    margin-right: 8px;
+}
+#tabs-profile{
+    display: none;
+}
+.profile{
+    width: 100%;
+}
+/* .profile-wrapper .sidebar{
+    
+} */
+.profile-wrapper .profile {
+    font-weight: normal;
+}
+
+.profile .image{
+    position: relative;
+}
+.profile .image img{
+    display: block;
+    width: 100%;
+    height: auto;
+    border-radius: 100%;
+    margin-top: -32px;
+    
+}
+.profile .image .status{
+    background: white;
+    padding: 8px;
+    border-radius: 38px;
+    border: 1px solid var(--github-outline-gray);
+    position: absolute;
+    /* justify-content: center; */
+    cursor: pointer;
+    left: 85%;
+    text-align: left;
+    bottom:32;
+}
+
+.profile .image .emoji{
+  display: block;
+}
+.profile .image .text{
+    margin: 0px 8px;
+  display: none;
+}
+
+.profile .image .status:hover{
+    width: auto;
+}
+.profile .image .status:hover .text{
+    color: var(--github-blue);
+    display: block;
+
+}
+
+.profile .fullname{
+    font-size: 26px;
+    margin-top: 16px;
+}
+.profile-wrapper .profile .username {
+    font-size: 20px;
+    font-weight: lighter;
+    color: var(--github-gray)
+}
+.profile .bio {
+    font-size: 16px;
+    margin-top: 16px;
+    line-height: 1.5;
+}
+
+.repos {
+    width: 100%;
+}
+.repos header{
+    padding: 16px 0px;
+    border-bottom: 1px solid var(--github-outline-gray)
+}
+.repos header input {
+    width: 100%;
+    border-color: var(--github-outline-gray);
+    color: var(--github-gray);
+}
+.repos header input:focus {
+    border-color: var(--github-blue);
+    color: var(--github-black);
+    box-shadow: 0px 0px 0px 3px var(--github-shadow-blue);
+}
+
+.repos .repository {
+padding: 32px 0px;
+border-bottom: 1px solid var(--github-outline-gray)
+}
+.repository .header{
+    justify-content: space-between;
+}
+.repository .name_description{
+    width: 75%;
+}
+.repository h3{
+    font-size: 20px;
+}
+.repository a {
+    color: var(--github-blue)
+}
+.repository a:hover{
+    text-decoration: underline;
+}
+
+.repository .description {
+    font-size: 14px;
+    margin-top: 8px;
+}
+
+.repository .info{
+    display:  flex;
+    font-size: 12px;
+    margin-top: 16px;
+}
+
+.repository .info>div{
+    margin-right: 16px;
+    display: inline-flex;
+    align-items: center;
+}
+.repository .info>div svg{
+    margin-right: 4px;
+    fill: var(--github-gray)
+}
+
+.repository button>svg{
+    margin-right: 4px;
+    fill: var(--github-gray);
+}
+.repository button{
+    display: inline-flex;
+    outline: none;
+    cursor: pointer;
+    border: 1px solid var(--github-svg-gray);
+    background-color: white;
+    border-radius: 5px;
+    padding: 6px 12px;
+    font-weight: 600;
+    font-size: 12px;
+}
+.repository button:hover{
+    background-color: var(--github-outline-gray);
+
+}
+
+.language{
+    display: inline-flex;
+    
+}
+
+.language .indicator{
+    display: block;
+    width: 12px;
+    height: 12px;
+    border-radius: 100%;
+    background-color: var(--github-peach);
+    margin-right: 4px;
+}
+
+@media screen and (max-width: 768px) {
+    
+    
+
+
+    .container{
+        flex-direction: column;
+    }
+
+    .mobile-menu{
+        display: inline-flex;
+    }
+    .sidebar {
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .sidebar .profile .image{
+        display: flex;
+        align-items: center;
+    }
+    .sidebar .profile .status{
+        display: none;
+    }
+    .sidebar .profile .image img{
+        display: block;
+        width: 20%;
+        align-items: center;
+        margin-top: 16px;
+    }
+    .tabs-wrapper .sidebar  {
+        display: none !important;
+    }
+
+    .tabs{
+        overflow-x: visible;
+        width: 100%;
+    }
+    .tabs a{
+        display: inline-flex;
+        white-space: nowrap;
+    }
+    .tabs .item{
+        padding: 8px 12px;
+    }
+    .tabs .item svg{
+        display: none;
+    }
+
+    .repository .name_description{
+        width: 95%;
+    }
+
+}
