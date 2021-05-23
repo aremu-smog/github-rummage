@@ -214,10 +214,10 @@ text-decoration: none;
     font-weight: normal;
 }
 
-.profile .image{
+.profile .avatar{
     position: relative;
 }
-.profile .image img{
+.profile .avatar img{
     display: block;
     width: 100%;
     height: auto;
@@ -225,7 +225,7 @@ text-decoration: none;
     margin-top: -32px;
     
 }
-.profile .image .status{
+.profile .avatar .status{
     background: white;
     padding: 8px;
     border-radius: 38px;
@@ -238,10 +238,10 @@ text-decoration: none;
     bottom:32;
 }
 
-.profile .image .emoji{
+.profile .avatar .emoji{
   display: block;
 }
-.profile .image .text{
+.profile .avatar .text{
     margin: 0px 8px;
   display: none;
 }
@@ -387,9 +387,13 @@ border-bottom: 1px solid var(--github-outline-gray)
     .sidebar .profile .status{
         display: none;
     }
-    .sidebar .profile .image img{
-        display: block;
+    .sidebar .profile .avatar {
         width: 20%;
+        margin-right: 16px ;
+    }
+    .sidebar .profile .avatar img{
+        display: block;
+        width: 100%;
         align-items: center;
         margin-top: 16px;
     }
