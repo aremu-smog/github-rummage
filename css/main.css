@@ -7,6 +7,7 @@
     --github-light-blue: #54a3ff;
     --github-shadow-blue: #54a4ff67;
     --github-peach: #f9826c;
+    --github-green: #2ea44f;
 }
 
 *{
@@ -28,7 +29,13 @@ a{
     display: flex;
 }
 
+#profile-page{
+    display: none;
+}
 
+#search-page{
+    display: flex;
+}
 
 .main-header{
     background-color: var(--github-black);
@@ -277,12 +284,12 @@ text-decoration: none;
     padding: 16px 0px;
     border-bottom: 1px solid var(--github-outline-gray)
 }
-.repos header input {
+.input-dark {
     width: 100%;
     border-color: var(--github-outline-gray);
     color: var(--github-gray);
 }
-.repos header input:focus {
+.input-dark:focus {
     border-color: var(--github-blue);
     color: var(--github-black);
     box-shadow: 0px 0px 0px 3px var(--github-shadow-blue);
@@ -363,6 +370,55 @@ border-bottom: 1px solid var(--github-outline-gray)
     margin-right: 4px;
 }
 
+
+.search-wrapper {
+    width: 100%;
+    height: 100vh;
+
+}
+
+.search-wrapper header {
+   justify-content: center;
+}
+
+.search-wrapper h1{
+    font-size: 24px;
+}
+
+.search-wrapper .container{
+    display: block;
+    width: 400px;
+}
+.search-wrapper header > img {
+    display: block;
+    width: 40px;
+    height: 40px;
+    margin-right: 8px;
+}
+.search-wrapper form{
+    margin-top: 16px;
+display: flex;
+}
+.search-wrapper form input {
+    width: 100%;
+}
+
+#message-container{
+    text-align: center;
+    border-radius: 5px;
+    background-color: var(--github-outline-gray);
+    margin-top: 8px;
+    padding: 16px;
+    font-size: 14px;
+    display: none;
+}
+.search-wrapper form input[type="submit"]{
+width: 100px;
+background-color: var(--github-blue);
+cursor: pointer;
+margin-left: 8px;
+border: none;
+}
 @media screen and (max-width: 768px) {
     
     
@@ -417,7 +473,7 @@ border-bottom: 1px solid var(--github-outline-gray)
     }
 
     .repository .name_description{
-        width: 95%;
+        width: 80%;
     }
 
 }
