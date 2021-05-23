@@ -21,7 +21,7 @@ setTimeout(
     body: JSON.stringify({
       query: `
      query { 
-        user(login:"ireade"){
+        user(login:"aremu-smog"){
             name
           avatarUrl
           login
@@ -37,6 +37,7 @@ setTimeout(
                 description
                 forkCount
                 stargazerCount
+                updatedAt
                 primaryLanguage{
                   name
                   color

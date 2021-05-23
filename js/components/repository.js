@@ -1,4 +1,27 @@
+const months = [
+  "Jan",
+  "Feb",
+  "Mar",
+  "Apr",
+  "May",
+  "Jun",
+  "Jul",
+  "Aug",
+  "Sep",
+  "Oct",
+  "Nov",
+  "Dec",
+];
 const generateRepository = (repo) => {
+  const current_date = new Date();
+  const date_updated = new Date(repo.updatedAt);
+  let the_date_updated =
+    date_updated.getDate() + " " + months[date_updated.getMonth()];
+
+  if (current_date.getFullYear() !== date_updated.getFullYear()) {
+    the_date_updated += " " + date_updated.getFullYear();
+  }
+
   return `
     <section class="repository">
         <section class="header flex-vertical-center">
@@ -52,7 +75,7 @@ const generateRepository = (repo) => {
                         : ""
                     }
                 
-                <div class="date">Updated yesterday</div>
+                <div class="date">Updated on ${the_date_updated}</div>
             </div>
         </div>
     </section>
