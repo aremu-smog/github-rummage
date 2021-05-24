@@ -100,11 +100,10 @@ input{
 .input-dark {
     width: 100%;
     border-color: var(--github-outline-gray);
-    color: var(--github-gray);
+    color: var(--github-black);
 }
 .input-dark:focus {
     border-color: var(--github-blue);
-    color: var(--github-black);
     box-shadow: 0px 0px 0px 3px var(--github-shadow-blue);
 }
 
@@ -412,11 +411,13 @@ display: flex;
 #message-container{
     text-align: center;
     border-radius: 5px;
-    background-color: var(--github-outline-gray);
     margin-top: 8px;
     padding: 16px;
     font-size: 14px;
     display: none;
+    border-width: 2px;
+    border-style: solid;
+    
 }
 .search-wrapper form input[type="submit"]{
 width: 100px;
