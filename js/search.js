@@ -40,6 +40,8 @@ const submit_button = document.querySelector(`input[type="submit"]`);
 
 const doSearch = async (search_page, profile_page) => {
   message_container.style.display = "block";
+  message_container.style.borderColor = "var(--github-light-blue)";
+
   message_container.innerHTML = `Load din din Loading`;
 
   submit_button.disabled = true;
@@ -69,6 +71,8 @@ const doSearch = async (search_page, profile_page) => {
     .catch((error) => {
       console.log(error.message);
       username.value = "";
+      message_container.style.borderColor = "var(--github-peach)";
+
       message_container.innerHTML = `The pain...  the sadness... when you can't find something you are looking for😞. Luckily you can try again😍`;
 
       setTimeout(() => {
