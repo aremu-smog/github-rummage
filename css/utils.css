@@ -8,6 +8,10 @@
     padding-right: 32px;
 }
 
+.hide-on-pc{
+    display: none;
+}
+
 @media  screen and (max-width:768px) {
     .wrapper{
         padding-right: 16px;
@@ -15,5 +19,9 @@
     }
     .hide-on-mobile{
         display: none;
+    }
+
+    .hide-on-pc{
+        display: inherit;
     }
 }

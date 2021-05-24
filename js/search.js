@@ -34,6 +34,8 @@ query($username: String!) {
 
 const username = document.querySelector("#username_input");
 const message_container = document.querySelector("#message-container");
+
+const page_title = document.querySelector("title");
 const submit_button = document.querySelector(`input[type="submit"]`);
 
 const doSearch = async (search_page, profile_page) => {
@@ -60,6 +62,7 @@ const doSearch = async (search_page, profile_page) => {
     .then((res) => res.json())
     .then((data) => {
       generateProfile(data);
+      page_title.innerText = `${username.value}'s repositories`;
       search_page.style.display = "none";
       profile_page.style.display = "block";
     })

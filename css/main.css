@@ -226,9 +226,7 @@ text-decoration: none;
 .profile{
     width: 100%;
 }
-/* .profile-wrapper .sidebar{
-    
-} */
+
 .profile-wrapper .profile {
     font-weight: normal;
 }
@@ -433,6 +431,7 @@ border: none;
 
     .container{
         flex-direction: column;
+        width: 100%;
     }
 
     .mobile-menu{
@@ -472,6 +471,16 @@ border: none;
         display: none !important;
     }
 
+    .profile-wrapper.wrapper{
+padding-right: 0px !important;
+padding-left: 0px !important;
+    }
+
+  
+    .profile-wrapper :is(.sidebar, .repos){
+        width: calc(100% - 32px);
+        padding:  0px 16px;
+    }
     .tabs{
         overflow-x: visible;
         width: 100%;
