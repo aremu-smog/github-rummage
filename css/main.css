@@ -96,6 +96,18 @@ input{
     line-height: 0;
 }
 
+.input-dark {
+    width: 100%;
+    border-color: var(--github-outline-gray);
+    color: var(--github-gray);
+}
+.input-dark:focus {
+    border-color: var(--github-blue);
+    color: var(--github-black);
+    box-shadow: 0px 0px 0px 3px var(--github-shadow-blue);
+}
+
+
 .main-header input{
     border-color: #444d56;
 }
@@ -265,6 +277,7 @@ text-decoration: none;
 .profile .fullname{
     font-size: 26px;
     margin-top: 16px;
+    font-weight: 500;
 }
 .profile-wrapper .profile .username {
     font-size: 20px;
@@ -284,17 +297,10 @@ text-decoration: none;
     padding: 16px 0px;
     border-bottom: 1px solid var(--github-outline-gray)
 }
-.input-dark {
-    width: 100%;
-    border-color: var(--github-outline-gray);
-    color: var(--github-gray);
-}
-.input-dark:focus {
-    border-color: var(--github-blue);
-    color: var(--github-black);
-    box-shadow: 0px 0px 0px 3px var(--github-shadow-blue);
-}
 
+.repos header input {
+    width: 100%;
+}
 .repos .repository {
 padding: 32px 0px;
 border-bottom: 1px solid var(--github-outline-gray)
@@ -307,6 +313,7 @@ border-bottom: 1px solid var(--github-outline-gray)
 }
 .repository h3{
     font-size: 20px;
+    font-weight: 500;
 }
 .repository a {
     color: var(--github-blue)
@@ -430,6 +437,14 @@ border: none;
 
     .mobile-menu{
         display: inline-flex;
+    }
+
+    .main-header {
+        margin-bottom: 0px;
+    }
+
+    .tabs-wrapper {
+        margin-top: 16px;
     }
     .sidebar {
         width: 100%;
