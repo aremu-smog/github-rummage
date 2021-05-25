@@ -225,15 +225,17 @@ text-decoration: none;
 }
 .profile{
     width: 100%;
+    position: relative;
 }
 
 .profile-wrapper .profile {
     font-weight: normal;
 }
-
-.profile .avatar{
-    position: relative;
+.profile-wrapper .profile {
+    font-weight: normal;
 }
+
+
 .profile .avatar img{
     background-color: var(--github-outline-gray);
     display: block;
@@ -251,9 +253,9 @@ text-decoration: none;
     border: 1px solid var(--github-outline-gray);
     position: absolute;
     cursor: pointer;
-    left: 85%;
+    left: calc(100% - 40px);
     text-align: left;
-    bottom:32px;
+    bottom:  55%;
 }
 
 #status:hover{
