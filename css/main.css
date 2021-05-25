@@ -147,8 +147,8 @@ text-decoration: none;
     height: 9px;
     border-radius: 100%;
     position: absolute;
-    top: -9;
-    right:-4;
+    top: -9px;
+    right:-4px;
     background: linear-gradient( var(--github-light-blue), var(--github-blue));
     border: 2px solid var(--github-black);
 }
@@ -252,7 +252,7 @@ text-decoration: none;
     cursor: pointer;
     left: 85%;
     text-align: left;
-    bottom:32;
+    bottom:32px;
 }
 
 .profile .avatar .emoji{
