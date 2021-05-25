@@ -412,6 +412,10 @@ border-bottom: 1px solid var(--github-outline-gray)
     fill: var(--github-gray)
 }
 
+.just_in_case{
+    padding: 50px;
+}
+
 .repository button>svg{
     margin-right: 4px;
     fill: var(--github-gray);

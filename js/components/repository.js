@@ -40,6 +40,7 @@ const generateRepository = (repo) => {
                 </button>
             </div>
         </section>
+        <!--- Just in case -->
             <div class="info">
 
                     ${
