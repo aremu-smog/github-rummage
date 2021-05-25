@@ -13,6 +13,7 @@
 *{
     margin: 0px;
     padding: 0px;
+    box-sizing: border-box;
 }
 body{
     color: var(--github-black);
@@ -313,9 +314,7 @@ text-decoration: none;
 }
 
 
-.repos header input {
-    width: 100%;
-}
+
 .repos .repository {
 padding: 32px 0px;
 border-bottom: 1px solid var(--github-outline-gray)
