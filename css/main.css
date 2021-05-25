@@ -240,6 +240,7 @@ text-decoration: none;
     width: 100%;
     height: auto;
     border-radius: 100%;
+    aspect-ratio: 1/1;
     margin-top: -32px;
     
 }
