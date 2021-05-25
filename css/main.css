@@ -235,6 +235,7 @@ text-decoration: none;
     position: relative;
 }
 .profile .avatar img{
+    background-color: var(--github-outline-gray);
     display: block;
     width: 100%;
     height: auto;
@@ -242,31 +243,34 @@ text-decoration: none;
     margin-top: -32px;
     
 }
-.profile .avatar .status{
+#status{
     background: white;
     padding: 8px;
     border-radius: 38px;
     border: 1px solid var(--github-outline-gray);
     position: absolute;
-    /* justify-content: center; */
     cursor: pointer;
     left: 85%;
     text-align: left;
     bottom:32px;
 }
 
-.profile .avatar .emoji{
-  display: block;
+#status:hover{
+    width: auto;
 }
-.profile .avatar .text{
+#status .emoji{
+  display: flex;
+  align-items: center;
+  width: 22px;
+  overflow: hidden;
+  height: 22px;
+}
+#status .message{
     margin: 0px 8px;
   display: none;
 }
 
-.profile .image .status:hover{
-    width: auto;
-}
-.profile .image .status:hover .text{
+#status:hover .message{
     color: var(--github-blue);
     display: block;
 

@@ -3,6 +3,9 @@ import generateRepository from "./components/repository.js";
 const generateProfile = (data) => {
   const fullname_display = document.querySelector(".fullname");
   const bio_display = document.querySelector(".bio");
+  const status_display = document.querySelector("#status");
+  const status_emoji_display = document.querySelector("#status_emoji");
+  const status__message_display = document.querySelector("#status_message");
   const repos_display = document.querySelector(".repos .list");
   const allAvatars = document.querySelectorAll(".avatar img");
   const allUsername = document.querySelectorAll(".username");
@@ -13,8 +16,26 @@ const generateProfile = (data) => {
   const bio = user.bio;
   const avatar = user.avatarUrl;
   const repositories = user.repositories.edges;
+  // const status_emoji = user.status.emojiHTML;
+  // const status_message = user.status.message;
 
+  console.log(user.status);
   bio_display.innerHTML = bio;
+  if (user.status) {
+    const status_emoji = user.status.emojiHTML;
+    const status_message = user.status.message;
+
+    if (status_message && status_emoji) {
+      status_emoji_display.innerHTML = user.status.emojiHTML;
+      status__message_display.innerHTML = user.status.message;
+      status_display.style.display = "flex";
+    } else {
+      status_display.style.display = "none";
+    }
+  } else {
+    status_display.style.display = "none";
+  }
+
   fullname_display.innerHTML = fullname;
 
   allAvatars.forEach((avatar_display) => {

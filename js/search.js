@@ -8,9 +8,9 @@ query($username: String!) {
      login
      bio
      status{
-       emoji
- 
-     }
+      message
+      emojiHTML
+    }
      repositories(first: 20, privacy: PUBLIC, orderBy: {field: UPDATED_AT, direction: DESC }){
        edges{
          node{
@@ -79,6 +79,8 @@ const doSearch = async (search_page, profile_page) => {
       } else {
         message_container.innerHTML = `The pain...  the sadness... when you can't find something you are looking for😞. Luckily you can try again😍`;
       }
+
+      console.log(error_message);
 
       setTimeout(() => {
         message_container.style.display = "none";
