@@ -69,11 +69,16 @@ const doSearch = async (search_page, profile_page) => {
       profile_page.style.display = "block";
     })
     .catch((error) => {
-      console.log(error.message);
+      const error_message = error.message;
+
       username.value = "";
       message_container.style.borderColor = "var(--github-peach)";
 
-      message_container.innerHTML = `The pain...  the sadness... when you can't find something you are looking for😞. Luckily you can try again😍`;
+      if (error_message == "Failed to fetch") {
+        message_container.innerHTML = `Your internet appears not be with you on this one. Kindly try again`;
+      } else {
+        message_container.innerHTML = `The pain...  the sadness... when you can't find something you are looking for😞. Luckily you can try again😍`;
+      }
 
       setTimeout(() => {
         message_container.style.display = "none";
