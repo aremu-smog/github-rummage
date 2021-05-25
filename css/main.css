@@ -251,6 +251,7 @@ text-decoration: none;
     display: inline-flex;
     align-items: center;
     margin-left: -5px;
+    height: 54px;
 }
 
 .tabs .item .pill {
@@ -596,6 +597,7 @@ padding-left: 0px !important;
     }
     .tabs .item{
         padding: 8px 12px;
+        height: 40px;
     }
     .tabs .item svg{
         display: none;
