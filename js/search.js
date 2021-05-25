@@ -11,7 +11,13 @@ query($username: String!) {
       message
       emojiHTML
     }
-     repositories(first: 20, privacy: PUBLIC, orderBy: {field: UPDATED_AT, direction: DESC }){
+    allRepos: repositories{
+      totalCount
+    }
+     publicRepos: repositories(first: 20, privacy: PUBLIC, orderBy: {field: UPDATED_AT, direction: DESC }){
+
+      totalCount
+      
        edges{
          node{
            name

@@ -6,6 +6,10 @@ const generateProfile = (data) => {
   const status_display = document.querySelector("#status");
   const status_emoji_display = document.querySelector("#status_emoji");
   const status__message_display = document.querySelector("#status_message");
+  const total_no_of_repos_display = document.querySelectorAll(".total_repos");
+  const total_public_repos_display = document.querySelector(
+    "#total_public_repos"
+  );
   const repos_display = document.querySelector(".repos .list");
   const allAvatars = document.querySelectorAll(".avatar img");
   const allUsername = document.querySelectorAll(".username");
@@ -15,12 +19,18 @@ const generateProfile = (data) => {
   const username = user.login;
   const bio = user.bio;
   const avatar = user.avatarUrl;
-  const repositories = user.repositories.edges;
-  // const status_emoji = user.status.emojiHTML;
-  // const status_message = user.status.message;
+  const repositories = user.publicRepos.edges;
+  const total_public_repos = user.publicRepos.totalCount;
+  const total_no_of_repos = user.allRepos.totalCount;
 
-  console.log(user.status);
+  console.log(user.allRepos.totalCount);
   bio_display.innerHTML = bio;
+  total_public_repos_display.innerHTML = total_public_repos;
+
+  total_no_of_repos_display.forEach((total_no_of_repo_display) => {
+    total_no_of_repo_display.innerHTML = total_no_of_repos;
+  });
+
   if (user.status) {
     const status_emoji = user.status.emojiHTML;
     const status_message = user.status.message;

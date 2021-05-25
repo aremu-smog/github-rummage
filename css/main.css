@@ -199,6 +199,15 @@ text-decoration: none;
     margin-left: -5px;
 }
 
+.tabs .item .pill {
+    margin-left: 8px;
+    padding: 4px 8px;
+    font-weight: 600;
+    font-size: 12px;
+    border-radius: 16px;
+    background-color: var(--github-outline-gray);
+}
+
 .tabs .item:hover{
     border-bottom-color: #d1d5da;
 }
@@ -298,10 +307,11 @@ text-decoration: none;
 .repos {
     width: 100%;
 }
-.repos header{
+.repos header, .repos .results{
     padding: 16px 0px;
     border-bottom: 1px solid var(--github-outline-gray)
 }
+
 
 .repos header input {
     width: 100%;
