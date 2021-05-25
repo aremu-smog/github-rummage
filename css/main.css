@@ -482,10 +482,11 @@ display: flex;
     text-align: center;
     border-radius: 5px;
     margin-top: 8px;
-    padding: 16px;
+    padding:12px 8px;
+    line-height: 1.5;
     font-size: 14px;
     display: none;
-    border-width: 2px;
+    border-width: 1.5px;
     border-style: solid;
     
 }
@@ -495,6 +496,10 @@ background-color: var(--github-blue);
 cursor: pointer;
 margin-left: 8px;
 border: none;
+}
+.search-wrapper form input[type="submit"]:hover{
+background-color: var(--github-light-blue);
+
 }
 
 @media screen and (max-width: 868px) {
@@ -575,7 +580,7 @@ padding-left: 0px !important;
 
   
     .profile-wrapper .sidebar, .profile-wrapper .repos{
-        width: calc(100% - 32px);
+        width: 100% ;
         padding:  0px 16px;
     }
     .tabs{
