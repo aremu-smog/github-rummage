@@ -171,6 +171,9 @@ text-decoration: none;
      font-weight: bold;
      font-size: 14px;
  }
+ .sidebar .profile .image {
+    position: relative;
+ }
 
   .sidebar .profile img {
      width: 32px;
@@ -235,7 +238,6 @@ text-decoration: none;
 }
 .profile{
     width: 100%;
-    position: relative;
 }
 
 .profile-wrapper .profile {
@@ -265,15 +267,16 @@ text-decoration: none;
     cursor: pointer;
     left: calc(100% - 40px);
     text-align: left;
-    bottom:  55%;
+    top:  50%;
 }
 
 #status:hover{
-    width: auto;
+    width: max-content;
 }
 #status .emoji{
   display: flex;
   align-items: center;
+  justify-content: center;
   width: 22px;
   overflow: hidden;
   height: 22px;
@@ -286,6 +289,7 @@ text-decoration: none;
 #status:hover .message{
     color: var(--github-blue);
     display: block;
+    width: auto;
 
 }
 
@@ -468,17 +472,32 @@ border: none;
         max-width: 100%;
     }
 
-    .sidebar .profile .image{
+    .sidebar .profile .image > section{
         display: flex;
         align-items: center;
+        
     }
-    .sidebar .profile .status{
-        display: none;
+  #status{
+        position: static;
+        width: 100%;
+        border-radius: 5px;
+        color: var(--github-black);
+        margin-top: 36px;
+    }
+
+#status .message {
+    display: block;
+}
+  #status:hover {
+        width: 100%;
+    
     }
     .sidebar .profile .avatar {
         width: 20%;
         margin-right: 16px ;
+        flex-shrink: 0;
     }
+    
     .sidebar .profile .avatar img{
         display: block;
         width: 100%;
