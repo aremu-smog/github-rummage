@@ -1,271 +1,447 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="GithHub website clone - application for the role of frontend engineer at Buycoins. May 2021">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="GithHub website clone - application for the role of frontend engineer at Buycoins. May 2021"
+    />
     <title>GitHub Clone</title>
     <link rel="shortcut icon" href="./images/github-logo.png" />
     <link rel="stylesheet" href="./css/main.css" />
     <link rel="stylesheet" href="./css/utils.css" />
-</head>
-<body>
-
+  </head>
+  <body>
+    <!-- Profile Page  -->
     <section id="profile-page">
+      <!-- Header  -->
+      <header class="main-header wrapper">
+        <!-- Mobile Menu Icon-->
+        <button class="mobile-menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
 
-        <!-- Header  -->
-        <header class="main-header wrapper">
-            <!-- Mobile Menu Icon-->
-            <button class="mobile-menu">
-    
-                <span></span>
-                <span></span>
-                <span></span>
+        <!-- Logo, Search, Navigation -->
+        <section>
+          <!-- Logo -->
+          <div class="logo">
+            <a href="#">
+              <img src="./images/github-logo-light.png" alt="GitHub logo" />
+            </a>
+          </div>
+
+          <!-- Search -->
+          <div class="flex-vertical-center hide-on-mobile search">
+            <input type="text" placeholder="Search or jump to..." />
+
+            <!-- Slash in box -->
+            <button>
+              <span class="stroke-container"><span class="stroke"></span></span>
             </button>
-            <!-- Logo, Search, Navigation -->
-            <section >
-    
-                <!-- Logo -->
-                <div class="logo">
-                    <a href="#">
-                        <img src="./images/github-logo-light.png" alt="GitHub logo" />
-                    </a>
-                </div>
-    
-                <!-- Search -->
-                <div class="  flex-vertical-center hide-on-mobile search" >
-                    <input type="text" placeholder="Search or jump to..." />
-                    <button>
-                        <span class="stroke-container"><span class="stroke"></span></span>
-                    </button>
-                </div>
-        
-                <!-- Navigation -->
-                <nav class="hide-on-mobile">
-                    <ul>
-                        <li><a href="#">Pull<span class="hide-on-tab"> Request</span>s </a></li>
-                        <li><a href="#">Issues</a></li>
-                        <li><a href="#">Marketplace</a></li>
-                        <li><a href="#">Explore</a></li>
-                    </ul>
-                </nav>
-            </section>
-    
-            <!-- User: Notification, Create, Avatar -->
-            <section class="user">
-    
-                <!-- Notification -->
-                <div class="notification">
-                    <a href="#">
-                        <svg aria-hidden="true" viewBox="0 0 16 16" version="1.1"  height="16" width="16" fill="white" >
-                            <path d="M8 16a2 2 0 001.985-1.75c.017-.137-.097-.25-.235-.25h-3.5c-.138 0-.252.113-.235.25A2 2 0 008 16z"></path><path fill-rule="evenodd" d="M8 1.5A3.5 3.5 0 004.5 5v2.947c0 .346-.102.683-.294.97l-1.703 2.556a.018.018 0 00-.003.01l.001.006c0 .002.002.004.004.006a.017.017 0 00.006.004l.007.001h10.964l.007-.001a.016.016 0 00.006-.004.016.016 0 00.004-.006l.001-.007a.017.017 0 00-.003-.01l-1.703-2.554a1.75 1.75 0 01-.294-.97V5A3.5 3.5 0 008 1.5zM3 5a5 5 0 0110 0v2.947c0 .05.015.098.042.139l1.703 2.555A1.518 1.518 0 0113.482 13H2.518a1.518 1.518 0 01-1.263-2.36l1.703-2.554A.25.25 0 003 7.947V5z"></path>
-                        </svg>
-                    </a>
-                    <span class="indicator"></span>
-                </div>
-                <!-- Create -->
-                <div class="hide-on-mobile">
-                    <a href="#">
-    
-                        <svg aria-hidden="true" viewBox="0 0 16 16" version="1.1"  height="16" width="16" fill="white">
-                            <path fill-rule="evenodd" d="M7.75 2a.75.75 0 01.75.75V7h4.25a.75.75 0 110 1.5H8.5v4.25a.75.75 0 11-1.5 0V8.5H2.75a.75.75 0 010-1.5H7V2.75A.75.75 0 017.75 2z"></path>
-                        </svg>
-                    </a>
-                
-                </div>
-                <!-- Avatar -->
-                <div class="avatar hide-on-mobile">
-                    <img src="" alt="Avatar" />
-                    
-                </div>
-            </section>
-        </header>
-    
-        <!-- Tabs Wrapper -->
-        <section class="tabs-wrapper wrapper hide-on-mobile">
-            <div class="container">
-    
-                <aside class="sidebar flex-vertical-center">
-                    <section class="profile flex-vertical-center avatar" id="tabs-profile">
-                        <img src="" />
-                        <p class="username">aremu-smog</p>
-                    </section>
-                </aside>
-                <nav>
-                    <ul class="tabs">
-                        <a href="#">
-                            <li class="item ">
-                                <svg aria-hidden="true" viewBox="0 0 16 16" version="1.1" height="16" width="16" >
-                                    <path fill-rule="evenodd" d="M0 1.75A.75.75 0 01.75 1h4.253c1.227 0 2.317.59 3 1.501A3.744 3.744 0 0111.006 1h4.245a.75.75 0 01.75.75v10.5a.75.75 0 01-.75.75h-4.507a2.25 2.25 0 00-1.591.659l-.622.621a.75.75 0 01-1.06 0l-.622-.621A2.25 2.25 0 005.258 13H.75a.75.75 0 01-.75-.75V1.75zm8.755 3a2.25 2.25 0 012.25-2.25H14.5v9h-3.757c-.71 0-1.4.201-1.992.572l.004-7.322zm-1.504 7.324l.004-5.073-.002-2.253A2.25 2.25 0 005.003 2.5H1.5v9h3.757a3.75 3.75 0 011.994.574z"></path>
-                                </svg>
-                                Overview
-                            </li>
-                        </a>
-                        <a href="#">
-                            <li class="item active ">
-                                <svg aria-hidden="true" viewBox="0 0 16 16" version="1.1"  height="16" width="16" >
-                                    <path fill-rule="evenodd" d="M2 2.5A2.5 2.5 0 014.5 0h8.75a.75.75 0 01.75.75v12.5a.75.75 0 01-.75.75h-2.5a.75.75 0 110-1.5h1.75v-2h-8a1 1 0 00-.714 1.7.75.75 0 01-1.072 1.05A2.495 2.495 0 012 11.5v-9zm10.5-1V9h-8c-.356 0-.694.074-1 .208V2.5a1 1 0 011-1h8zM5 12.25v3.25a.25.25 0 00.4.2l1.45-1.087a.25.25 0 01.3 0L8.6 15.7a.25.25 0 00.4-.2v-3.25a.25.25 0 00-.25-.25h-3.5a.25.25 0 00-.25.25z"></path>
-                                </svg>
-                                Repositories
-                                <span class="pill total_repos"></span>
-                            </li>
-                        </a>
-                        <a href="#">
-                            <li class="item ">
-                                <svg aria-hidden="true" viewBox="0 0 16 16" version="1.1" height="16" width="16" >
-                                    <path fill-rule="evenodd" d="M1.75 0A1.75 1.75 0 000 1.75v12.5C0 15.216.784 16 1.75 16h12.5A1.75 1.75 0 0016 14.25V1.75A1.75 1.75 0 0014.25 0H1.75zM1.5 1.75a.25.25 0 01.25-.25h12.5a.25.25 0 01.25.25v12.5a.25.25 0 01-.25.25H1.75a.25.25 0 01-.25-.25V1.75zM11.75 3a.75.75 0 00-.75.75v7.5a.75.75 0 001.5 0v-7.5a.75.75 0 00-.75-.75zm-8.25.75a.75.75 0 011.5 0v5.5a.75.75 0 01-1.5 0v-5.5zM8 3a.75.75 0 00-.75.75v3.5a.75.75 0 001.5 0v-3.5A.75.75 0 008 3z"></path>
-                                </svg>
-                                Projects
-                            </li>
-                        </a>
-                        <a href="#">
-                            <li class="item ">
-                                <svg aria-hidden="true" viewBox="0 0 16 16" version="1.1"  height="16" width="16" >
-                                    <path fill-rule="evenodd" d="M8.878.392a1.75 1.75 0 00-1.756 0l-5.25 3.045A1.75 1.75 0 001 4.951v6.098c0 .624.332 1.2.872 1.514l5.25 3.045a1.75 1.75 0 001.756 0l5.25-3.045c.54-.313.872-.89.872-1.514V4.951c0-.624-.332-1.2-.872-1.514L8.878.392zM7.875 1.69a.25.25 0 01.25 0l4.63 2.685L8 7.133 3.245 4.375l4.63-2.685zM2.5 5.677v5.372c0 .09.047.171.125.216l4.625 2.683V8.432L2.5 5.677zm6.25 8.271l4.625-2.683a.25.25 0 00.125-.216V5.677L8.75 8.432v5.516z"></path>
-                                </svg>
-                                Packages
-                            </li>
-                        </a>
-                    </ul>
-                </nav>
-            </div>
+          </div>
+
+          <!-- Navigation -->
+          <nav class="hide-on-mobile">
+            <ul>
+              <li>
+                <a href="#">Pull<span class="hide-on-tab"> Request</span>s </a>
+              </li>
+              <li><a href="#">Issues</a></li>
+              <li><a href="#">Marketplace</a></li>
+              <li><a href="#">Explore</a></li>
+            </ul>
+          </nav>
         </section>
-    
-        <!-- Profile Information-->
-        <section class="profile-wrapper wrapper">
-            <div class="container">
-                <aside class="sidebar">
-                    <div class="profile">
-                        <div class="image ">
-                            <section>
 
-                                <div class="avatar">
-                                    <img src=""/>
-                                </div>
-    
-                                <div class="name">
-                                    
-                                    <h2 class="fullname">Ire Aderinokun</h2>
-                                    <p class="username">ireade</p>
-                                </div>
-                            </section>
-                            <div class="status flex-vertical-center" id="status">
-                                <span class="emoji" id="status_emoji">😇</span>
-                                <p class="message" id="status_message">Focusing</p>
-    
-                            </div>
-                        </div>
-    
-    
-                        <p class="bio">
-                            Making web development relatable, fun and easy. Building stuffs with JAMStack
-                        </p>
-                    </div>
-                </aside>
-                
-                <section class="tabs-wrapper wrapper hide-on-pc">
-                    <div class="container">
-                        <nav>
-                            <ul class="tabs">
-                                <a href="#">
-                                    <li class="item ">
-                                        Overview
-                                    </li>
-                                </a>
-                                <a href="#">
-                                    <li class="item active ">
-                                      
-                                        Repositories
-                                        <span class="pill total_repos"></span>
-                                    </li>
-                                </a>
-                                <a href="#">
-                                    <li class="item ">
-                                        Projects
-                                    </li>
-                                </a>
-                                <a href="#">
-                                    <li class="item ">
-                                        
-                                        Packages
-                                    </li>
-                                </a>
-                            </ul>
-                        </nav>
-                    </div>
-                </section>
-                <section class="repos">
-                    <header>
-                        <input placeholder="Find a repository..." class="input-dark" />
-                    </header>
+        <!-- Notification, Create, Avatar -->
+        <section class="user">
+          <!-- Notification -->
+          <div class="notification">
+            <a href="#">
+              <!-- Notification Icon -->
+              <svg
+                aria-hidden="true"
+                viewBox="0 0 16 16"
+                version="1.1"
+                height="16"
+                width="16"
+                fill="white"
+              >
+                <path
+                  d="M8 16a2 2 0 001.985-1.75c.017-.137-.097-.25-.235-.25h-3.5c-.138 0-.252.113-.235.25A2 2 0 008 16z"
+                ></path>
+                <path
+                  fill-rule="evenodd"
+                  d="M8 1.5A3.5 3.5 0 004.5 5v2.947c0 .346-.102.683-.294.97l-1.703 2.556a.018.018 0 00-.003.01l.001.006c0 .002.002.004.004.006a.017.017 0 00.006.004l.007.001h10.964l.007-.001a.016.016 0 00.006-.004.016.016 0 00.004-.006l.001-.007a.017.017 0 00-.003-.01l-1.703-2.554a1.75 1.75 0 01-.294-.97V5A3.5 3.5 0 008 1.5zM3 5a5 5 0 0110 0v2.947c0 .05.015.098.042.139l1.703 2.555A1.518 1.518 0 0113.482 13H2.518a1.518 1.518 0 01-1.263-2.36l1.703-2.554A.25.25 0 003 7.947V5z"
+                ></path>
+              </svg>
+            </a>
 
-                    <p class="results" id="results">
-                            <b id="total_public_repos"></b> results for <b>public</b> repositories
-                    </p>
-    
-                    <div class="list">
-    
-                        <section class="repository">
-                            <div class="">
-                                <h3><a href="#">aremu-github-clone</a></h3>
-                                <p class="description">Assessment for the role of mid-level frontend engineer at Buycoins</p>
-                                <div class="info">
-        
-                                        <div class="language">
-                                            <span class="indicator"></span>
-                                            <p class="name">HTML</p>
-                                        </div>
-                                        <div class="star">
-                                            <svg aria-label="star" viewBox="0 0 16 16" version="1.1" width="16" height="16" role="img"><path fill-rule="evenodd" d="M8 .25a.75.75 0 01.673.418l1.882 3.815 4.21.612a.75.75 0 01.416 1.279l-3.046 2.97.719 4.192a.75.75 0 01-1.088.791L8 12.347l-3.766 1.98a.75.75 0 01-1.088-.79l.72-4.194L.818 6.374a.75.75 0 01.416-1.28l4.21-.611L7.327.668A.75.75 0 018 .25zm0 2.445L6.615 5.5a.75.75 0 01-.564.41l-3.097.45 2.24 2.184a.75.75 0 01.216.664l-.528 3.084 2.769-1.456a.75.75 0 01.698 0l2.77 1.456-.53-3.084a.75.75 0 01.216-.664l2.24-2.183-3.096-.45a.75.75 0 01-.564-.41L8 2.694v.001z"></path></svg>
-                                            <p class="name">23</p>
-                                        </div>
-                                        <div class="fork">
-                                            <svg aria-label="fork"  viewBox="0 0 16 16" version="1.1" width="16" height="16" role="img"><path fill-rule="evenodd" d="M5 3.25a.75.75 0 11-1.5 0 .75.75 0 011.5 0zm0 2.122a2.25 2.25 0 10-1.5 0v.878A2.25 2.25 0 005.75 8.5h1.5v2.128a2.251 2.251 0 101.5 0V8.5h1.5a2.25 2.25 0 002.25-2.25v-.878a2.25 2.25 0 10-1.5 0v.878a.75.75 0 01-.75.75h-4.5A.75.75 0 015 6.25v-.878zm3.75 7.378a.75.75 0 11-1.5 0 .75.75 0 011.5 0zm3-8.75a.75.75 0 100-1.5.75.75 0 000 1.5z"></path></svg>
-                                            <p class="name">2</p>
-                                        </div>
-                                        <div class="license">
-                                            <svg  viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M8.75.75a.75.75 0 00-1.5 0V2h-.984c-.305 0-.604.08-.869.23l-1.288.737A.25.25 0 013.984 3H1.75a.75.75 0 000 1.5h.428L.066 9.192a.75.75 0 00.154.838l.53-.53-.53.53v.001l.002.002.002.002.006.006.016.015.045.04a3.514 3.514 0 00.686.45A4.492 4.492 0 003 11c.88 0 1.556-.22 2.023-.454a3.515 3.515 0 00.686-.45l.045-.04.016-.015.006-.006.002-.002.001-.002L5.25 9.5l.53.53a.75.75 0 00.154-.838L3.822 4.5h.162c.305 0 .604-.08.869-.23l1.289-.737a.25.25 0 01.124-.033h.984V13h-2.5a.75.75 0 000 1.5h6.5a.75.75 0 000-1.5h-2.5V3.5h.984a.25.25 0 01.124.033l1.29.736c.264.152.563.231.868.231h.162l-2.112 4.692a.75.75 0 00.154.838l.53-.53-.53.53v.001l.002.002.002.002.006.006.016.015.045.04a3.517 3.517 0 00.686.45A4.492 4.492 0 0013 11c.88 0 1.556-.22 2.023-.454a3.512 3.512 0 00.686-.45l.045-.04.01-.01.006-.005.006-.006.002-.002.001-.002-.529-.531.53.53a.75.75 0 00.154-.838L13.823 4.5h.427a.75.75 0 000-1.5h-2.234a.25.25 0 01-.124-.033l-1.29-.736A1.75 1.75 0 009.735 2H8.75V.75zM1.695 9.227c.285.135.718.273 1.305.273s1.02-.138 1.305-.273L3 6.327l-1.305 2.9zm10 0c.285.135.718.273 1.305.273s1.02-.138 1.305-.273L13 6.327l-1.305 2.9z"></path></svg>
-                                            <p class="name">BSD Zero Clause License </p>
-                                        </div>
-                                   
-                                    <div class="date">Updated yesterday</div>
-                                </div>
-                            </div>
-                        </section>
-                    </div>
-                    
-                </section>
-            </div>
+            <!-- Notification indicator -->
+            <span class="indicator"></span>
+          </div>
+
+          <!-- Create -->
+          <div class="hide-on-mobile">
+            <a href="#" class="flex-vertical-center">
+              <!-- Plus Icon  -->
+              <svg
+                aria-hidden="true"
+                viewBox="0 0 16 16"
+                version="1.1"
+                height="16"
+                width="16"
+                fill="white"
+              >
+                <path
+                  fill-rule="evenodd"
+                  d="M7.75 2a.75.75 0 01.75.75V7h4.25a.75.75 0 110 1.5H8.5v4.25a.75.75 0 11-1.5 0V8.5H2.75a.75.75 0 010-1.5H7V2.75A.75.75 0 017.75 2z"
+                ></path>
+              </svg>
+
+              <!-- Caret -->
+              <svg
+                width="8"
+                height="5"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+                class="caret"
+              >
+                <path
+                  fill-rule="evenodd"
+                  clip-rule="evenodd"
+                  d="M3.871 4.487a.581.581 0 01-.124-.054c-.04-.024-.663-.639-1.863-1.84C-.086.62.034.75.006.58A.509.509 0 01.403.014c.088-.019 7.105-.019 7.194 0a.54.54 0 01.351.27.511.511 0 01.045.303c-.03.164.082.044-1.877 2.006-1.204 1.204-1.823 1.816-1.863 1.84a.495.495 0 01-.382.054z"
+                  fill="#fff"
+                />
+              </svg>
+            </a>
+          </div>
+          <!-- Avatar -->
+          <div class="avatar hide-on-mobile flex-vertical-center">
+            <img src="" alt="Avatar" />
+
+            <!-- Caret -->
+            <svg
+              width="8"
+              height="5"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+              class="caret"
+            >
+              <path
+                fill-rule="evenodd"
+                clip-rule="evenodd"
+                d="M3.871 4.487a.581.581 0 01-.124-.054c-.04-.024-.663-.639-1.863-1.84C-.086.62.034.75.006.58A.509.509 0 01.403.014c.088-.019 7.105-.019 7.194 0a.54.54 0 01.351.27.511.511 0 01.045.303c-.03.164.082.044-1.877 2.006-1.204 1.204-1.823 1.816-1.863 1.84a.495.495 0 01-.382.054z"
+                fill="#fff"
+              />
+            </svg>
+          </div>
         </section>
-    </section>
+      </header>
+
+      <!-- Tabs Wrapper -->
+      <section class="tabs-wrapper wrapper hide-on-mobile">
 
 
-    <!-- Search -->
-    <section class="search-wrapper flex-vertical-center" id="search-page">
-        <div class="container wrapper">
+        <div class="container">
 
-            <header class="flex-vertical-center">
-                <img src="./images/github-logo.png" alt="GitHub logo" />
-                <h1>GithHub Profile Finder</h1>
-            </header>
-            <p id="message-container"></p>
-            <section>
-                <form id="search-form"  action="#">
-                    <input type="text" class="input-dark" placeholder="Enter a username e.g ireade" id="username_input" required="required" />
-                    <input type="submit" value="Search" />
-                </form>
+            <!-- Sidebar -->
+          <aside class="sidebar flex-vertical-center">
+
+
+            <!-- Profile image and username -->
+            <section class="profile flex-vertical-center avatar"  id="tabs-profile">
+              <img src="" />
+              <p class="username">aremu-smog</p>
             </section>
+          </aside>
+
+
+          <nav>
+
+            <!-- Tabs  -->
+            <ul class="tabs">
+
+
+                <!-- Overview -->
+              <a href="#">
+                <li class="item">
+
+                    <!-- Overview Icon -->
+                  <svg aria-hidden="true" viewBox="0 0 16 16" version="1.1" height="16" width="16">
+                    <path
+                      fill-rule="evenodd"
+                      d="M0 1.75A.75.75 0 01.75 1h4.253c1.227 0 2.317.59 3 1.501A3.744 3.744 0 0111.006 1h4.245a.75.75 0 01.75.75v10.5a.75.75 0 01-.75.75h-4.507a2.25 2.25 0 00-1.591.659l-.622.621a.75.75 0 01-1.06 0l-.622-.621A2.25 2.25 0 005.258 13H.75a.75.75 0 01-.75-.75V1.75zm8.755 3a2.25 2.25 0 012.25-2.25H14.5v9h-3.757c-.71 0-1.4.201-1.992.572l.004-7.322zm-1.504 7.324l.004-5.073-.002-2.253A2.25 2.25 0 005.003 2.5H1.5v9h3.757a3.75 3.75 0 011.994.574z"
+                    ></path>
+                  </svg>
+                  Overview
+                </li>
+              </a>
+
+              <!-- Repositories -->
+              <a href="#">
+                <li class="item active">
+
+                <!-- Repositories Icon  -->
+                  <svg aria-hidden="true" viewBox="0 0 16 16" version="1.1" height="16" width="16" >
+                    <path
+                      fill-rule="evenodd"
+                      d="M2 2.5A2.5 2.5 0 014.5 0h8.75a.75.75 0 01.75.75v12.5a.75.75 0 01-.75.75h-2.5a.75.75 0 110-1.5h1.75v-2h-8a1 1 0 00-.714 1.7.75.75 0 01-1.072 1.05A2.495 2.495 0 012 11.5v-9zm10.5-1V9h-8c-.356 0-.694.074-1 .208V2.5a1 1 0 011-1h8zM5 12.25v3.25a.25.25 0 00.4.2l1.45-1.087a.25.25 0 01.3 0L8.6 15.7a.25.25 0 00.4-.2v-3.25a.25.25 0 00-.25-.25h-3.5a.25.25 0 00-.25.25z"
+                    ></path>
+                  </svg>
+                  Repositories
+                  <span class="pill total_repos"></span>
+                </li>
+              </a>
+
+
+              <!-- Projects -->
+              <a href="#">
+                <li class="item">
+
+                    <!-- Projects Icon  -->
+                  <svg aria-hidden="true" viewBox="0 0 16 16" version="1.1" height="16" width="16" >
+                    <path
+                      fill-rule="evenodd"
+                      d="M1.75 0A1.75 1.75 0 000 1.75v12.5C0 15.216.784 16 1.75 16h12.5A1.75 1.75 0 0016 14.25V1.75A1.75 1.75 0 0014.25 0H1.75zM1.5 1.75a.25.25 0 01.25-.25h12.5a.25.25 0 01.25.25v12.5a.25.25 0 01-.25.25H1.75a.25.25 0 01-.25-.25V1.75zM11.75 3a.75.75 0 00-.75.75v7.5a.75.75 0 001.5 0v-7.5a.75.75 0 00-.75-.75zm-8.25.75a.75.75 0 011.5 0v5.5a.75.75 0 01-1.5 0v-5.5zM8 3a.75.75 0 00-.75.75v3.5a.75.75 0 001.5 0v-3.5A.75.75 0 008 3z"
+                    ></path>
+                  </svg>
+                  Projects
+                </li>
+              </a>
+
+
+              <!-- Packages  -->
+              <a href="#">
+                <li class="item">
+
+                    <!-- Packages  -->
+                  <svg aria-hidden="true" viewBox="0 0 16 16" version="1.1" height="16" width="16">
+                    <path
+                      fill-rule="evenodd"
+                      d="M8.878.392a1.75 1.75 0 00-1.756 0l-5.25 3.045A1.75 1.75 0 001 4.951v6.098c0 .624.332 1.2.872 1.514l5.25 3.045a1.75 1.75 0 001.756 0l5.25-3.045c.54-.313.872-.89.872-1.514V4.951c0-.624-.332-1.2-.872-1.514L8.878.392zM7.875 1.69a.25.25 0 01.25 0l4.63 2.685L8 7.133 3.245 4.375l4.63-2.685zM2.5 5.677v5.372c0 .09.047.171.125.216l4.625 2.683V8.432L2.5 5.677zm6.25 8.271l4.625-2.683a.25.25 0 00.125-.216V5.677L8.75 8.432v5.516z"
+                    ></path>
+                  </svg>
+                  Packages
+                </li>
+              </a>
+
+            </ul>
+
+          </nav>
+
         </div>
+      </section>
+
+      <!-- Profile Information-->
+      <section class="profile-wrapper wrapper">
+        <div class="container">
+
+
+            <!-- Sidebar  -->
+          <aside class="sidebar">
+
+            <!-- Profile Information -->
+            <div class="profile">
+
+                <!-- TODO: Rename image to info  -->
+              <div class="image">
+                <section>
+
+                    <!-- Avatar  -->
+                  <div class="avatar">
+                    <img src="" />
+                  </div>
+
+                  <!-- Name  -->
+                  <div class="name">
+                    <h2 class="fullname">Ire Aderinokun</h2>
+                    <p class="username">ireade</p>
+                  </div>
+                </section>
+
+                <!-- Status  -->
+                <div class="status flex-vertical-center" id="status">
+                  <span class="emoji" id="status_emoji">😇</span>
+                  <p class="message" id="status_message">Focusing</p>
+                </div>
+
+              </div>
+
+              <!-- User's Bio -->
+              <p class="bio">
+                Making web development relatable, fun and easy. Building stuffs
+                with JAMStack
+              </p>
+
+            </div>
+          </aside>
+
+          <!-- Mobile Tabs -->
+          <section class="tabs-wrapper wrapper hide-on-pc">
+            <div class="container">
+
+                <!-- Navigation -->
+              <nav>
+
+                  <!-- Tabs -->
+                <ul class="tabs">
+                  <a href="#">
+                    <li class="item">Overview</li>
+                  </a>
+                  <a href="#">
+                    <li class="item active">
+                      Repositories
+                      <span class="pill total_repos"></span>
+                    </li>
+                  </a>
+                  <a href="#">
+                    <li class="item">Projects</li>
+                  </a>
+                  <a href="#">
+                    <li class="item">Packages</li>
+                  </a>
+                </ul>
+
+              </nav>
+
+            </div>
+          </section>
+
+
+          <!-- Repositories -->
+          <section class="repos">
+
+            <!-- Header  -->
+            <header>
+
+                <!-- Repositories search box  -->
+              <input placeholder="Find a repository..." class="input-dark" />
+            </header>
+
+            <!-- Repositories result -->
+            <p class="results" id="results">
+              <b id="total_public_repos"></b> results for
+              <b>public</b> repositories
+            </p>
+
+            <!-- List of repos -->
+            <div class="list">
+
+                <!-- Repo list is dynamically generated following the format below -->
+              <!-- <section class="repository">
+                <div class="">
+                  <h3><a href="#">aremu-github-clone</a></h3>
+                  <p class="description">
+                    Assessment for the role of mid-level frontend engineer at
+                    Buycoins
+                  </p>
+                  <div class="info">
+                    <div class="language">
+                      <span class="indicator"></span>
+                      <p class="name">HTML</p>
+                    </div>
+                    <div class="star">
+                      <svg
+                        aria-label="star"
+                        viewBox="0 0 16 16"
+                        version="1.1"
+                        width="16"
+                        height="16"
+                        role="img"
+                      >
+                        <path
+                          fill-rule="evenodd"
+                          d="M8 .25a.75.75 0 01.673.418l1.882 3.815 4.21.612a.75.75 0 01.416 1.279l-3.046 2.97.719 4.192a.75.75 0 01-1.088.791L8 12.347l-3.766 1.98a.75.75 0 01-1.088-.79l.72-4.194L.818 6.374a.75.75 0 01.416-1.28l4.21-.611L7.327.668A.75.75 0 018 .25zm0 2.445L6.615 5.5a.75.75 0 01-.564.41l-3.097.45 2.24 2.184a.75.75 0 01.216.664l-.528 3.084 2.769-1.456a.75.75 0 01.698 0l2.77 1.456-.53-3.084a.75.75 0 01.216-.664l2.24-2.183-3.096-.45a.75.75 0 01-.564-.41L8 2.694v.001z"
+                        ></path>
+                      </svg>
+                      <p class="name">23</p>
+                    </div>
+                    <div class="fork">
+                      <svg
+                        aria-label="fork"
+                        viewBox="0 0 16 16"
+                        version="1.1"
+                        width="16"
+                        height="16"
+                        role="img"
+                      >
+                        <path
+                          fill-rule="evenodd"
+                          d="M5 3.25a.75.75 0 11-1.5 0 .75.75 0 011.5 0zm0 2.122a2.25 2.25 0 10-1.5 0v.878A2.25 2.25 0 005.75 8.5h1.5v2.128a2.251 2.251 0 101.5 0V8.5h1.5a2.25 2.25 0 002.25-2.25v-.878a2.25 2.25 0 10-1.5 0v.878a.75.75 0 01-.75.75h-4.5A.75.75 0 015 6.25v-.878zm3.75 7.378a.75.75 0 11-1.5 0 .75.75 0 011.5 0zm3-8.75a.75.75 0 100-1.5.75.75 0 000 1.5z"
+                        ></path>
+                      </svg>
+                      <p class="name">2</p>
+                    </div>
+                    <div class="license">
+                      <svg
+                        viewBox="0 0 16 16"
+                        version="1.1"
+                        width="16"
+                        height="16"
+                        aria-hidden="true"
+                      >
+                        <path
+                          fill-rule="evenodd"
+                          d="M8.75.75a.75.75 0 00-1.5 0V2h-.984c-.305 0-.604.08-.869.23l-1.288.737A.25.25 0 013.984 3H1.75a.75.75 0 000 1.5h.428L.066 9.192a.75.75 0 00.154.838l.53-.53-.53.53v.001l.002.002.002.002.006.006.016.015.045.04a3.514 3.514 0 00.686.45A4.492 4.492 0 003 11c.88 0 1.556-.22 2.023-.454a3.515 3.515 0 00.686-.45l.045-.04.016-.015.006-.006.002-.002.001-.002L5.25 9.5l.53.53a.75.75 0 00.154-.838L3.822 4.5h.162c.305 0 .604-.08.869-.23l1.289-.737a.25.25 0 01.124-.033h.984V13h-2.5a.75.75 0 000 1.5h6.5a.75.75 0 000-1.5h-2.5V3.5h.984a.25.25 0 01.124.033l1.29.736c.264.152.563.231.868.231h.162l-2.112 4.692a.75.75 0 00.154.838l.53-.53-.53.53v.001l.002.002.002.002.006.006.016.015.045.04a3.517 3.517 0 00.686.45A4.492 4.492 0 0013 11c.88 0 1.556-.22 2.023-.454a3.512 3.512 0 00.686-.45l.045-.04.01-.01.006-.005.006-.006.002-.002.001-.002-.529-.531.53.53a.75.75 0 00.154-.838L13.823 4.5h.427a.75.75 0 000-1.5h-2.234a.25.25 0 01-.124-.033l-1.29-.736A1.75 1.75 0 009.735 2H8.75V.75zM1.695 9.227c.285.135.718.273 1.305.273s1.02-.138 1.305-.273L3 6.327l-1.305 2.9zm10 0c.285.135.718.273 1.305.273s1.02-.138 1.305-.273L13 6.327l-1.305 2.9z"
+                        ></path>
+                      </svg>
+                      <p class="name">BSD Zero Clause License</p>
+                    </div>
+
+                    <div class="date">Updated yesterday</div>
+                  </div>
+                </div>
+              </section> -->
+
+            </div>
+          </section>
+        </div>
+      </section>
+    </section>
+
+    <!-- Search Page -->
+    <section class="search-wrapper flex-vertical-center" id="search-page">
+
+      <div class="container wrapper">
+
+        <!-- Logo and App Name-->
+        <header class="flex-vertical-center">
+          <img src="./images/github-logo.png" alt="GitHub logo" />
+          <h1>GithHub Profile Finder</h1>
+        </header>
+
+        <!-- Feedback Message -->
+        <p id="message-container"></p>
+
+
+        <section>
+
+            <!-- Search Form -->
+          <form id="search-form" action="#">
+            <input
+              type="text"
+              class="input-dark"
+              placeholder="Enter a username e.g ireade"
+              id="username_input"
+              required="required"
+            />
+            <input type="submit" value="Search" />
+          </form>
+
+        </section>
+
+
+      </div>
 
     </section>
-    <main>
+    <main></main>
 
-    
-
-    </main>
-
-<script src="./js/main.js" type="module"></script>
-<script src="./js/scroll.js" ></script>
-</body>
+    <script src="./js/main.js" type="module"></script>
+    <script src="./js/scroll.js"></script>
+  </body>
 </html>

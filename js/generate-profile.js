@@ -1,6 +1,7 @@
 import generateRepository from "./components/repository.js";
 
 const generateProfile = (data) => {
+  // Select appropriate DOM elements to hold each user data
   const fullname_display = document.querySelector(".fullname");
   const bio_display = document.querySelector(".bio");
   const status_display = document.querySelector("#status");
@@ -14,7 +15,9 @@ const generateProfile = (data) => {
   const allAvatars = document.querySelectorAll(".avatar img");
   const allUsername = document.querySelectorAll(".username");
 
+  // Retrieve and store all user data
   const user = data.data.user;
+
   const fullname = user.name;
   const username = user.login;
   const bio = user.bio;
@@ -23,8 +26,9 @@ const generateProfile = (data) => {
   const total_public_repos = user.publicRepos.totalCount;
   const total_no_of_repos = user.allRepos.totalCount;
 
-  console.log(user.allRepos.totalCount);
+  // Update the DOM with appropriate values
   bio_display.innerHTML = bio;
+
   total_public_repos_display.innerHTML = total_public_repos;
 
   total_no_of_repos_display.forEach((total_no_of_repo_display) => {
@@ -58,7 +62,7 @@ const generateProfile = (data) => {
 
   repositories.map((repository, index) => {
     if (index === 0) {
-      //Clear the repos
+      //Clear the repos list
       repos_display.innerHTML = "";
     }
     repos_display.innerHTML += generateRepository(repository.node);

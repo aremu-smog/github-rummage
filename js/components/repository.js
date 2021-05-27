@@ -1,27 +1,4 @@
-const months = [
-  "Jan",
-  "Feb",
-  "Mar",
-  "Apr",
-  "May",
-  "Jun",
-  "Jul",
-  "Aug",
-  "Sep",
-  "Oct",
-  "Nov",
-  "Dec",
-];
 const generateRepository = (repo) => {
-  const current_date = new Date();
-  const date_updated = new Date(repo.updatedAt);
-  let the_date_updated =
-    date_updated.getDate() + " " + months[date_updated.getMonth()];
-
-  if (current_date.getFullYear() !== date_updated.getFullYear()) {
-    the_date_updated += " " + date_updated.getFullYear();
-  }
-
   return `
     <section class="repository">
         <section class="header flex-vertical-center">
@@ -76,11 +53,40 @@ const generateRepository = (repo) => {
                         : ""
                     }
                 
-                <div class="date">Updated on ${the_date_updated}</div>
+                <div class="date">Updated on ${generateRepoDate(
+                  repo.updatedAt
+                )}</div>
             </div>
         </div>
     </section>
     `;
 };
 
+const generateRepoDate = (date) => {
+  const months = [
+    "Jan",
+    "Feb",
+    "Mar",
+    "Apr",
+    "May",
+    "Jun",
+    "Jul",
+    "Aug",
+    "Sep",
+    "Oct",
+    "Nov",
+    "Dec",
+  ];
+
+  const current_date = new Date();
+  const date_updated = new Date(date);
+  let the_date_updated =
+    date_updated.getDate() + " " + months[date_updated.getMonth()];
+
+  if (current_date.getFullYear() !== date_updated.getFullYear()) {
+    the_date_updated += " " + date_updated.getFullYear();
+  }
+
+  return the_date_updated;
+};
 export default generateRepository;
