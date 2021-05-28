@@ -8,6 +8,7 @@
     --github-shadow-blue: #54a4ff67;
     --github-peach: #f9826c;
     --github-green: #2ea44f;
+    --padding-value: 16px;
 }
 
 *{
@@ -37,7 +38,7 @@ body{
 }
 
 #profile-page{
-    display: none;
+    display: block;
 }
 
 #search-page{
@@ -121,6 +122,16 @@ input{
 .main-header .search:focus-within {
     width: 300px;
 }
+
+.main-header .mobile-nav .search{
+    width: 100%;
+    display: flex;
+    
+}
+.main-header .mobile-nav .search:focus-within {
+    width: 100%;
+}
+
 .main-header input{
     width: 100%;
     border-color: #444d56;
@@ -219,6 +230,43 @@ text-decoration: none;
 
 .main-header .user .avatar {
     cursor: pointer;
+}
+
+.main-header .mobile-nav{
+    position: absolute;
+    width: 100%;
+    left: -16px;
+    z-index: 200;
+    top: 68px;
+    background-color: var(--github-black);
+    padding: 0px var(--padding-value);
+    display: block;
+   
+}
+
+
+.main-header .mobile-nav ul {
+    width: 100%;
+}
+.main-header .mobile-nav ul li{
+    display: block;
+    margin-left: 0px;
+    padding: 8px 0;
+    width: 100%;
+    border-bottom: 1px solid var(--github-svg-gray);
+    font-size: 14px;
+}
+.main-header .mobile-nav ul li:last-child{
+    margin-bottom: 32px;
+}
+.main-header .mobile-nav ul li a{
+    width: 100%;
+}
+.main-header .mobile-nav  .avatar img{
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    margin-right: 8px;
 }
 .caret{
     margin-left: 4px;

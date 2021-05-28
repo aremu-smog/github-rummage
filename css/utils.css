@@ -12,7 +12,7 @@
     display: none;
 }
 
-@media screen and (max-width: 868px){
+@media screen and (min-width:768px) and (max-width: 868px){
     .hide-on-tab{
         display: none;
     }
