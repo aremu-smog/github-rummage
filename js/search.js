@@ -81,10 +81,10 @@ const doSearch = async (search_page, profile_page) => {
       page_title.innerText = `${username.value}'s repositories`;
 
       // Close the search page
-      search_page.style.display = "none";
+      search_page.classList.remove("active");
 
       // Open the profile page
-      profile_page.style.display = "block";
+      profile_page.classList.add("active");
     })
     .catch((error) => {
       // Retrieve the error

@@ -37,13 +37,16 @@ body{
     display: flex;
 }
 
-#profile-page{
+.page{
+    display: none;
+}
+
+.page.active{
     display: block;
 }
 
-#search-page{
-    display: flex;
-}
+
+
 
 .main-header{
     background-color: var(--github-black);
