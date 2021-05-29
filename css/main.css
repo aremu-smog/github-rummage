@@ -613,6 +613,14 @@ background-color: var(--github-light-green);
 
 #message-box.active{
     display: block;
+    transform: scale(0);
+    animation: message-animation 0.3s ease-in-out forwards;
+}
+
+@keyframes message-animation {
+    to{
+        transform: scale(1);
+    }
 }
 
 #message-box.error{

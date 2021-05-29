@@ -90,7 +90,7 @@ const doSearch = async (search_page, profile_page) => {
       message_container.classList.add("active", "error");
 
       if (error_message == "Failed to fetch") {
-        message_container.innerHTML = `Your internet appears not be with you on this one. Kindly try again`;
+        message_container.innerHTML = `Your internet appears not be with you on this one. Kindly try again ⚡`;
       } else {
         //Clear the username input field
         username.value = "";
