@@ -1,7 +1,7 @@
 import generateProfile from "./generate-profile.js";
 
 const username = document.querySelector("#username_input");
-const message_container = document.querySelector("#message-container");
+const message_container = document.querySelector("#message-box");
 
 const page_title = document.querySelector("title");
 const submit_button = document.querySelector(`input[type="submit"]`);
@@ -45,8 +45,7 @@ query($username: String!) {
 
 const doSearch = async (search_page, profile_page) => {
   //Style the message container
-  message_container.style.display = "block";
-  message_container.style.borderColor = "var(--github-light-blue)";
+  message_container.classList.add("active", "info");
 
   // Update the message container content
   message_container.innerHTML = `Load din din Loading`;
@@ -92,7 +91,7 @@ const doSearch = async (search_page, profile_page) => {
 
       //Style the message feedback to reflect error
 
-      message_container.style.borderColor = "var(--github-peach)";
+      message_container.classList.add("error");
 
       if (error_message == "Failed to fetch") {
         message_container.innerHTML = `Your internet appears not be with you on this one. Kindly try again`;

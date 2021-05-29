@@ -12,42 +12,26 @@
 }
 
 *{
-    margin: 0px;
-    padding: 0px;
     box-sizing: border-box;
+    padding: 0;
+    margin: 0;
 }
 
-a{
-    text-decoration: none;
-}
-
-svg{
-    display: block;
-}
 body{
     color: var(--github-black);
     line-height: 1.25;
     font-family: -apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif,Apple Color Emoji,Segoe UI Emoji;
 }
 
+a{text-decoration: none;}
+ul{list-style: none;}
 
-.container{
-    max-width: 1300px;
-    margin: auto;
-    display: flex;
-}
-
-.page{
-    display: none;
-}
-
-.page.active{
+svg{
     display: block;
 }
 
 
-
-
+/* Main Header  */
 .main-header{
     background-color: var(--github-black);
     display: flex;
@@ -188,21 +172,20 @@ input{
 }
 
 
-.main-header nav{
+.main-nav{
  margin-left: 16px;
  font-size: 14px;
 }
-.main-header nav ul{
-    list-style: none;
+.main-nav .nav-list{
     width: max-content;
 }
-.main-header nav ul li{
+.main-nav .nav-item{
 display: inline-block;
 margin-left: 16px;
 font-weight: 600;
 }
-.main-header nav ul li a, .main-header nav ul li a:visited{
-color: white;
+.main-nav .nav-item a, .main-nav .nav-item a:visited{
+color: white !important;
 text-decoration: none;
 }
 
@@ -222,6 +205,7 @@ text-decoration: none;
     background: linear-gradient( var(--github-light-blue), var(--github-blue));
     border: 2px solid var(--github-black);
 }
+
 .main-header .user .avatar img{
     display: block;
     width: 20px;
@@ -235,42 +219,6 @@ text-decoration: none;
     cursor: pointer;
 }
 
-.main-header .mobile-nav{
-    position: absolute;
-    width: 100%;
-    left: -16px;
-    z-index: 200;
-    top: 68px;
-    background-color: var(--github-black);
-    padding: 0px var(--padding-value);
-    display: block;
-   
-}
-
-
-.main-header .mobile-nav ul {
-    width: 100%;
-}
-.main-header .mobile-nav ul li{
-    display: block;
-    margin-left: 0px;
-    padding: 8px 0;
-    width: 100%;
-    border-bottom: 1px solid var(--github-svg-gray);
-    font-size: 14px;
-}
-.main-header .mobile-nav ul li:last-child{
-    margin-bottom: 32px;
-}
-.main-header .mobile-nav ul li a{
-    width: 100%;
-}
-.main-header .mobile-nav  .avatar img{
-    width: 20px;
-    height: 20px;
-    border-radius: 50%;
-    margin-right: 8px;
-}
 .caret{
     margin-left: 4px;
 }
@@ -279,12 +227,58 @@ text-decoration: none;
     opacity: 0.7;
 }
 
+/* Mobile Navigation */
+
+ .mobile-nav{
+    position: absolute;
+    width: 100%;
+    left: 0px;
+    z-index: 200;
+    top: 68px;
+    background-color: var(--github-black);
+    padding: 0px var(--padding-value);
+    display: none;   
+}
+.mobile-nav.active{
+    display: none ;
+}
+
+
+
+.mobile-nav .nav-list {
+    width: 100%;
+}
+
+.main-header .mobile-nav .nav-item{
+    display: block;
+    margin-left: 0px;
+    padding: 8px 0;
+    width: 100%;
+    border-bottom: 1px solid var(--github-svg-gray);
+    font-size: 14px;
+}
+.main-header .mobile-nav .nav-item:last-child{
+    margin-bottom: 32px;
+}
+.main-header .mobile-nav ul li a{
+    width: 100%;
+    color: white;
+}
+.main-header .mobile-nav  .avatar img{
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    margin-right: 8px;
+}
+
+
 .sidebar{
     width: 23.5%;
      max-width: 280px;
      margin-right: 32px;
      flex-shrink: 0;
  }
+
  .sidebar .profile {
      font-weight: bold;
      font-size: 14px;
@@ -300,17 +294,17 @@ text-decoration: none;
      display: block;
      margin-right: 8px;
  }
-.tabs-wrapper{
+
+
+ /* Tabs Wrapper  */
+.tabs.wrapper{
     border-bottom: 1px solid var(--github-outline-gray);
     position: sticky;
     top:0;
     background: white;
 }
 
-.tabs {
-    list-style: none;
-}
-.tabs .item{
+.tab-item{
     padding:  16px;
     border-bottom-width: 2px;
     border-bottom-style: solid;
@@ -322,7 +316,7 @@ text-decoration: none;
     height: 54px;
 }
 
-.tabs .item .pill {
+.tab-item .pill {
     margin-left: 8px;
     padding: 4px 8px;
     font-weight: 600;
@@ -331,33 +325,37 @@ text-decoration: none;
     background-color: var(--github-outline-gray);
 }
 
-.tabs .item:hover{
+.tab-item:hover{
     border-bottom-color: #d1d5da;
 }
-.tabs a {
+.tabs-list a {
     color: var(--github-gray);
    
 }
 
-.tabs .item.active{
+.tab-item.active{
    color: var(--github-black);
    border-bottom-color: var(--github-peach);
    font-weight: 600;
 }
 
-.tabs .item.active svg{
-    fill: var(--github-black);
-}
-.tabs .item svg{
+.tab-item svg{
     fill: var(--github-gray);
     margin-right: 8px;
 }
+
+.tab-item.active svg{
+    fill: var(--github-black);
+}
+
 #tabs-profile{
     display: none;
 }
 .profile{
     width: 100%;
 }
+
+/* Profile wrapper */
 
 .profile-wrapper .profile {
     font-weight: normal;
@@ -377,6 +375,8 @@ text-decoration: none;
     margin-top: -32px;
     
 }
+
+
 #status{
     background: white;
     padding: 8px;
@@ -392,6 +392,7 @@ text-decoration: none;
 #status:hover{
     width: max-content;
 }
+
 #status .emoji{
   display: flex;
   align-items: center;
@@ -400,6 +401,8 @@ text-decoration: none;
   overflow: hidden;
   height: 22px;
 }
+
+
 #status .message{
     margin: 0px 8px;
   display: none;
@@ -417,20 +420,24 @@ text-decoration: none;
     margin-top: 16px;
     font-weight: 500;
 }
+
 .profile-wrapper .profile .username {
     font-size: 20px;
     font-weight: lighter;
     color: var(--github-gray)
 }
+
 .profile .bio {
     font-size: 16px;
     margin-top: 16px;
     line-height: 1.5;
 }
 
+/* Repos container  */
 .repos {
     width: 100%;
 }
+
 .repos header, .repos .results{
     padding: 16px 0px;
     border-bottom: 1px solid var(--github-outline-gray)
@@ -519,61 +526,80 @@ border-bottom: 1px solid var(--github-outline-gray)
 }
 
 
-.search-wrapper {
+/* Search Page */
+
+#search-page .wrapper {
     width: 100%;
     height: 100vh;
-
+    max-width: 400px;
+    margin: auto;
 }
 
-.search-wrapper header {
+#search-page header {
    justify-content: center;
 }
 
-.search-wrapper h1{
+#search-page  h1{
     font-size: 24px;
 }
 
-.search-wrapper .container{
+#search-page .container{
     display: block;
     width: 400px;
 }
-.search-wrapper header > img {
+#search-page .logo {
     display: block;
     width: 32px;
     height: 32px;
     margin-right: 8px;
 }
-.search-wrapper form{
+#search-page form {
     margin-top: 16px;
 display: flex;
 }
-.search-wrapper form input {
+#search-page form input {
     width: 100%;
 }
 
-#message-container{
-    text-align: center;
-    border-radius: 5px;
-    margin-top: 8px;
-    padding:12px 8px;
-    line-height: 1.5;
-    font-size: 14px;
-    display: none;
-    border-width: 1.5px;
-    border-style: solid;
-    
-}
-.search-wrapper form input[type="submit"]{
-width: 100px;
-background-color: var(--github-blue);
-cursor: pointer;
-margin-left: 8px;
-border: none;
-}
-.search-wrapper form input[type="submit"]:hover{
+#search-page form input[type="submit"]{
+    width: 100px;
+    background-color: var(--github-blue);
+    cursor: pointer;
+    margin-left: 8px;
+    border: none;
+    }
+
+#search-page form input[type="submit"]:hover{
 background-color: var(--github-light-blue);
 
 }
+
+#message-box{
+    text-align: center;
+    border-radius: 5px;
+    margin-top: 16px;
+    padding:8px;
+    line-height: 1.5;
+    font-size: 14px;
+    display: none;
+    color: white;
+    
+}
+
+#message-box.active{
+    display: block;
+}
+
+#message-box.info{
+    background-color: var(--github-blue);
+}
+
+#message-box.error{
+    background-color: var(--github-peach);
+}
+
+
+
 
 @media screen and (max-width: 868px) {
     .main-header .search{
@@ -584,10 +610,12 @@ background-color: var(--github-light-blue);
     }
     
 }
+
+
+
+
 @media screen and (max-width: 768px) {
     
-    
-
 
     .container{
         flex-direction: column;
@@ -598,13 +626,19 @@ background-color: var(--github-light-blue);
         display: inline-flex;
     }
 
+    .mobile-nav.active{
+        display: block ;
+    }
+    
+
     .main-header {
         margin-bottom: 0px;
     }
 
-    .tabs-wrapper {
+    .tab.wrapper {
         margin-top: 16px;
     }
+
     .sidebar {
         width: 100%;
         max-width: 100%;
@@ -615,6 +649,7 @@ background-color: var(--github-light-blue);
         align-items: center;
         
     }
+
   #status{
         position: static;
         width: 100%;
@@ -626,10 +661,12 @@ background-color: var(--github-light-blue);
 #status .message {
     display: block;
 }
+
   #status:hover {
         width: 100%;
     
     }
+
     .sidebar .profile .avatar {
         width: 20%;
         margin-right: 16px ;
@@ -642,6 +679,7 @@ background-color: var(--github-light-blue);
         align-items: center;
         margin-top: 16px;
     }
+
     .tabs-wrapper .sidebar  {
         display: none !important;
     }
@@ -657,22 +695,22 @@ padding-left: 0px !important;
         padding:  0px 16px;
     }
 
-    .tabs-wrapper nav{
+    .tabs.wrapper nav{
         overflow-x: auto;
     }
-    .tabs{
+
+    .tabs-list{
         width: max-content;
     }
-    .tabs a{
+
+    .tabs-list a{
         display: inline-flex;
         white-space: nowrap;
     }
-    .tabs .item{
+
+    .tab-item{
         padding: 8px 12px;
         height: 40px;
-    }
-    .tabs .item svg{
-        display: none;
     }
 
     .repository .name_description{

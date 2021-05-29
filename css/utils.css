@@ -8,6 +8,21 @@
     padding-right: 32px;
 }
 
+.container{
+    max-width: 1300px;
+    margin: auto;
+    display: flex;
+}
+
+.page{
+    display: none;
+}
+
+.page.active{
+    display: block;
+}
+
+
 .hide-on-pc{
     display: none;
 }

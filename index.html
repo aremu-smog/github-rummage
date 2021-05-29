@@ -15,11 +15,11 @@
   </head>
   <body>
     <!-- Profile Page  -->
-    <section class="page" id="profile-page">
+    <section class="page active" id="profile-page">
       <!-- Header  -->
       <header class="main-header wrapper">
         <!-- Mobile Menu Icon-->
-        <button class="mobile-menu">
+        <button class="mobile-menu" id="mobile-menu-button">
           <span></span>
           <span></span>
           <span></span>
@@ -27,33 +27,33 @@
 
 
         <!-- Mobile Navigation -->
-        <nav class="mobile-nav hide-on-pc">
+        <nav class="mobile-nav " id="mobile-nav">
           
-          <!-- Navigation -->
+          <!-- MObile Navigation Navigation -->
           
-          <ul class="hide-on-pc">
-            <li>
+          <ul class="nav-list">
+            <li class="flex-vertical-center search ">
                 <!-- Search -->
-        <div class="flex-vertical-center search hide-on-pc">
+        
           <input type="text" placeholder="Search or jump to..." />
       
           <!-- Slash in box -->
           <button>
             <span class="stroke-container"><span class="stroke"></span></span>
           </button>
-        </div>
 
               </li>
-              <li>
-                <a href="#">Pull<span class="hide-on-tab"> Request</span>s </a>
+              <li class="nav-item">
+                <a href="#">Pull Requests </a>
               </li>
-              <li><a href="#">Issues</a></li>
-              <li><a href="#">Marketplace</a></li>
-              <li><a href="#"><section class="profile flex-vertical-center avatar"  >
+              <li class="nav-item"><a href="#">Issues</a></li>
+              <li class="nav-item"><a href="#">Marketplace</a></li>
+              <li class="nav-item"><a href="#" class="profile flex-vertical-center avatar" >
                 <img src="" />
                 <p class="username">aremu-smog</p>
-              </section></a></li>
+              </a></li>
             </ul>
+
           </nav>
 
 
@@ -77,15 +77,15 @@
             </button>
           </div>
 
-          <!-- Navigation -->
-          <nav class="hide-on-mobile">
-            <ul>
-              <li>
+          <!-- Main Navigation -->
+          <nav class="main-nav hide-on-mobile">
+            <ul class="nav-list">
+              <li class="nav-item">
                 <a href="#">Pull<span class="hide-on-tab"> Request</span>s </a>
-              </li>
-              <li><a href="#">Issues</a></li>
-              <li><a href="#">Marketplace</a></li>
-              <li><a href="#">Explore</a></li>
+              </li class="nav-item">
+              <li class="nav-item"><a href="#">Issues</a></li>
+              <li class="nav-item"><a href="#">Marketplace</a></li>
+              <li class="nav-item"><a href="#">Explore</a></li>
             </ul>
           </nav>
         </section>
@@ -179,7 +179,7 @@
       
 
       <!-- Tabs Wrapper -->
-      <section class="tabs-wrapper wrapper hide-on-mobile">
+      <section class="tabs wrapper hide-on-mobile">
 
 
         <div class="container">
@@ -199,12 +199,12 @@
           <nav>
 
             <!-- Tabs  -->
-            <ul class="tabs">
+            <ul class="tabs-list">
 
 
                 <!-- Overview -->
               <a href="#">
-                <li class="item">
+                <li class="tab-item">
 
                     <!-- Overview Icon -->
                   <svg aria-hidden="true" viewBox="0 0 16 16" version="1.1" height="16" width="16">
@@ -219,7 +219,7 @@
 
               <!-- Repositories -->
               <a href="#">
-                <li class="item active">
+                <li class="tab-item active">
 
                 <!-- Repositories Icon  -->
                   <svg aria-hidden="true" viewBox="0 0 16 16" version="1.1" height="16" width="16" >
@@ -236,7 +236,7 @@
 
               <!-- Projects -->
               <a href="#">
-                <li class="item">
+                <li class="tab-item">
 
                     <!-- Projects Icon  -->
                   <svg aria-hidden="true" viewBox="0 0 16 16" version="1.1" height="16" width="16" >
@@ -252,7 +252,7 @@
 
               <!-- Packages  -->
               <a href="#">
-                <li class="item">
+                <li class="tab-item">
 
                     <!-- Packages  -->
                   <svg aria-hidden="true" viewBox="0 0 16 16" version="1.1" height="16" width="16">
@@ -317,29 +317,30 @@
           </aside>
 
           <!-- Mobile Tabs -->
-          <section class="tabs-wrapper wrapper hide-on-pc">
+          <section class="tabs wrapper hide-on-pc">
             <div class="container">
 
                 <!-- Navigation -->
               <nav>
 
                   <!-- Tabs -->
-                <ul class="tabs">
+                <ul class="tabs-list">
                   <a href="#">
-                    <li class="item">Overview</li>
+                    <li class="tab-item">Overview</li>
                   </a>
-                  <a href="#">
-                    <li class="item active">
+                  <a href="#"></a>
+                    <li class="tab-item active">
                       Repositories
                       <span class="pill total_repos"></span>
                     </li>
                   </a>
+                  
+                    <li class="tab-item"><a href="#">Projects</a></li>
+                  <li class="tab-item">
                   <a href="#">
-                    <li class="item">Projects</li>
+                    Packages
                   </a>
-                  <a href="#">
-                    <li class="item">Packages</li>
-                  </a>
+                </li>
                 </ul>
 
               </nav>
@@ -443,33 +444,35 @@
     <!-- search-wrapper flex-vertical-center  -->
     <section class="page active" id="search-page">
 
-      <div class="container wrapper">
+      <div class="wrapper flex-vertical-center">
 
-        <!-- Logo and App Name-->
-        <header class="flex-vertical-center">
-          <img src="./images/github-logo.png" alt="GitHub logo" />
-          <h1>GithHub Profile Finder</h1>
-        </header>
+        <div>
 
-        <!-- Feedback Message -->
-        <p id="message-container"></p>
-
-
-        <section>
-
-            <!-- Search Form -->
-          <form id="search-form" action="#">
-            <input
-              type="text"
-              class="input-dark"
-              placeholder="Enter a username e.g ireade"
-              id="username_input"
-              required="required"
-            />
-            <input type="submit" value="Search" />
-          </form>
-
-        </section>
+          <!-- Logo and App Name-->
+          <header class="flex-vertical-center">
+            <img class="logo" src="./images/github-logo.png" alt="GitHub logo" />
+            <h1>GithHub Profile Finder</h1>
+          </header>
+  
+          <!-- Feedback Message -->
+          <p id="message-box" class="">Load. din.. din.. loading </p>
+  
+          <section>
+  
+              <!-- Search Form -->
+            <form id="search-form" class="flex-vertical-center" action="#">
+              <input
+                type="text"
+                class="input-dark"
+                placeholder="Enter a username e.g ireade"
+                id="username_input"
+                required="required"
+              />
+              <input type="submit" value="Search" />
+            </form>
+  
+          </section>
+        </div>
 
 
       </div>
