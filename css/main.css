@@ -554,7 +554,6 @@ border-bottom: 1px solid var(--github-outline-gray)
 }
 
 #search-page.container{
-    display: block;
     width: 308px;
 }
 #search-page .logo {
