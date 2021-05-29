@@ -45,17 +45,14 @@ query($username: String!) {
 
 const doSearch = async (search_page, profile_page) => {
   //Style the message container
-  message_container.classList.add("active", "info");
-
-  // Update the message container content
-  message_container.innerHTML = `Load din din Loading`;
 
   //Disable submit button to prevent event from being fired more than once
   submit_button.disabled = true;
 
+  submit_button.value = "Load din din Loading...";
+
   // Style and update submit button's value
-  submit_button.style.background = "var(--github-light-blue)";
-  submit_button.value = "Hang on...";
+  submit_button.classList.add("loading");
 
   //Make a call to graphql
   await fetch(`https://api.github.com/graphql`, {
@@ -90,8 +87,7 @@ const doSearch = async (search_page, profile_page) => {
       const error_message = error.message;
 
       //Style the message feedback to reflect error
-
-      message_container.classList.add("error");
+      message_container.classList.add("active", "error");
 
       if (error_message == "Failed to fetch") {
         message_container.innerHTML = `Your internet appears not be with you on this one. Kindly try again`;
@@ -107,13 +103,13 @@ const doSearch = async (search_page, profile_page) => {
 
       // Close the message box after the set CLOSING_TIME
       setTimeout(() => {
-        message_container.style.display = "none";
+        message_container.classList.remove("error", "active");
       }, CLOSING_TIME);
     });
 
   // Restore default settings of the submit button
   submit_button.disabled = false;
-  submit_button.style.background = "var(--github-blue)";
+  submit_button.classList.remove("loading");
   submit_button.value = "Search";
 };
 

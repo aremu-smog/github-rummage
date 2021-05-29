@@ -1,14 +1,22 @@
 :root{
+    /* Colors*/
     --github-black: #24292E;
     --github-gray: #959DA5;
     --github-outline-gray: #eaecef;
     --github-svg-gray: #6a737d;
     --github-blue: #0366D6;
     --github-light-blue: #54a3ff;
-    --github-shadow-blue: #54a4ff67;
-    --github-peach: #f9826c;
     --github-green: #2ea44f;
+    --github-light-green: #47c46a;
+    --github-shadow-blue: #54a4ff67;
+    --github-error-bg:#ffe3e6;
+    --github-peach: #f9826c;
+
+
     --padding-value: 16px;
+
+    /* Box Shadow default values*/
+    --box-shadow:  0px 0px 0px 3px ;
 }
 
 *{
@@ -85,7 +93,7 @@ input{
     border-style: solid;
     border-width: 1px;
     transition: width 0.3s ease-in-out;
-    border-radius: 5px;
+    border-radius: 6px;
     padding: 8px 10px;
     color: white;
     line-height: 0;
@@ -98,7 +106,7 @@ input{
 }
 .input-dark:focus {
     border-color: var(--github-blue);
-    box-shadow: 0px 0px 0px 3px var(--github-shadow-blue);
+    box-shadow: var(--box-shadow) var(--github-shadow-blue);
 }
 
 .main-header .search{
@@ -536,53 +544,70 @@ border-bottom: 1px solid var(--github-outline-gray)
 }
 
 #search-page header {
-   justify-content: center;
+   text-align:  center;
 }
 
 #search-page  h1{
+    margin-top: 16px;
     font-size: 24px;
+    font-weight: lighter;
 }
 
-#search-page .container{
+#search-page.container{
     display: block;
-    width: 400px;
+    width: 308px;
 }
 #search-page .logo {
-    display: block;
-    width: 32px;
-    height: 32px;
-    margin-right: 8px;
+    width: 48px;
+    height: 48px;
+    margin-top: 48px;
 }
-#search-page form {
+
+.form-container{
+    border-radius: 5px ;
+    background-color: #f6f8fa;
+    border: 1px solid var(--github-outline-gray);
+    padding: 24px;
     margin-top: 16px;
-display: flex;
 }
 #search-page form input {
     width: 100%;
+    background-color: white;
+}
+
+.form-container label{
+    font-size: 14px;
+    display: block;
+    margin-bottom: 8px;
 }
 
 #search-page form input[type="submit"]{
-    width: 100px;
-    background-color: var(--github-blue);
+    width: 100%;
+    background-color: var(--github-green);
     cursor: pointer;
-    margin-left: 8px;
     border: none;
+    display: block;
+    height: 33px;
+    margin-top: 20px;
     }
 
 #search-page form input[type="submit"]:hover{
-background-color: var(--github-light-blue);
+background-color: var(--github-light-green);
 
 }
+#search-page form input[type="submit"].loading{
+    background-color: var(--github-light-green);
+    cursor: not-allowed;
+    }
+
 
 #message-box{
-    text-align: center;
     border-radius: 5px;
     margin-top: 16px;
-    padding:8px;
+    padding:20px;
     line-height: 1.5;
     font-size: 14px;
     display: none;
-    color: white;
     
 }
 
@@ -590,12 +615,9 @@ background-color: var(--github-light-blue);
     display: block;
 }
 
-#message-box.info{
-    background-color: var(--github-blue);
-}
-
 #message-box.error{
-    background-color: var(--github-peach);
+    border: 1px solid var(--github-peach);
+    background-color: var(--github-error-bg);
 }
 
 

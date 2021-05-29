@@ -15,7 +15,7 @@
   </head>
   <body>
     <!-- Profile Page  -->
-    <section class="page active" id="profile-page">
+    <section class="page" id="profile-page">
       <!-- Header  -->
       <header class="main-header wrapper">
         <!-- Mobile Menu Icon-->
@@ -442,14 +442,13 @@
 
     <!-- Search Page -->
     <!-- search-wrapper flex-vertical-center  -->
-    <section class="page active" id="search-page">
+    <section class="page container active" id="search-page">
 
-      <div class="wrapper flex-vertical-center">
+     
 
-        <div>
 
           <!-- Logo and App Name-->
-          <header class="flex-vertical-center">
+          <header>
             <img class="logo" src="./images/github-logo.png" alt="GitHub logo" />
             <h1>GithHub Profile Finder</h1>
           </header>
@@ -457,10 +456,11 @@
           <!-- Feedback Message -->
           <p id="message-box" class="">Load. din.. din.. loading </p>
   
-          <section>
+          <section class="form-container">
   
               <!-- Search Form -->
-            <form id="search-form" class="flex-vertical-center" action="#">
+            <form id="search-form"  action="#">
+              <label>Username</label>
               <input
                 type="text"
                 class="input-dark"
@@ -468,14 +468,11 @@
                 id="username_input"
                 required="required"
               />
+              
               <input type="submit" value="Search" />
             </form>
   
           </section>
-        </div>
-
-
-      </div>
 
     </section>
     <main></main>

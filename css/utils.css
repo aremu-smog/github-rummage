@@ -20,6 +20,14 @@
 
 .page.active{
     display: block;
+    opacity: 0;
+    animation: page-reveal 1s ease-in-out  forwards;
+}
+
+@keyframes page-reveal {
+    to {
+        opacity: 1;
+    }
 }
 
 
