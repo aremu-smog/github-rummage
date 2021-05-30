@@ -54,7 +54,9 @@ const doSearch = async (search_page, profile_page) => {
   // Style and update submit button's value
   submit_button.classList.add("loading");
 
+  //Token
   const token = ``;
+
   //Make a call to graphql
   await fetch(`https://api.github.com/graphql`, {
     method: "POST",

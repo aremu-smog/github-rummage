@@ -1,3 +1,5 @@
+Update token on this [line](./js/search.js#L58)
+
 # This repo...
 is my solution to Buycoins midlevel Frontend Engineer role challenge, 2021.
 
