@@ -54,12 +54,13 @@ const doSearch = async (search_page, profile_page) => {
   // Style and update submit button's value
   submit_button.classList.add("loading");
 
+  const token = ``;
   //Make a call to graphql
   await fetch(`https://api.github.com/graphql`, {
     method: "POST",
     headers: {
       "Content-type": "application/json",
-      Authorization: "Bearer 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",
+      Authorization: `Bearer ${token}`,
     },
     body: JSON.stringify({
       query: query,
