@@ -7,6 +7,8 @@ is my solution to Buycoins midlevel Frontend Engineer role challenge, 2021.
 - The text __Pull Requests__ in the top navbar becomes __Pulls__ when the user is on a screen at 868px or less
 - The title in website tab changes to the format [user]'s repositories
 - Hovering on the user's status emoji shows the status text/message
+
+
 _These are features I think would be easy to miss so I thought to mention them_
 
 
